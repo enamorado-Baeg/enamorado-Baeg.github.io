@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apuestas</title>
+  <link rel="stylesheet" href="css/ajust.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header flex">
+    <h1 class="title">Il Faut <span>Parier</span></h1>
+    <div class="btnPerfil avatarImg mini"></div>
+  </header>
+  <main class="main">
+    <div class="saldo title"></div>
+    <div class="avatarCurrent">
+      <div class="avatarImg"></div>
+      <p class="name avatarName heading"></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <h2 class="heading">Comenzar a Apostar!</h2>
+    <div class="juegos flex">
+      <a href="juegos/blackjack.html" class="j1 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">BalcKJack</div>
+      </a>
+      <a class="j2 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">Próximamente</div>
+      </a>
+      <a class="j3 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">Próximamente</div>
+      </a>
+      <a class="j4 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">Próximamente</div>
+      </a>
+      <a class="j5 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">Próximamente</div>
+      </a>
+      <a class="j6 juego">
+        <div class="juegoImg"></div>
+        <div class="juegoName">Próximamente</div>
+      </a>
+    </div>
+    </div>
+  </footer>
+
+  <div class="perfil">
+    <header class="header">
+      <h1 class="title">Perfil</h1>
+      <div class="esc" onclick="disabled(perfil)">X</div>
+    </header>
+    <div class="info">
+      <div class="avatarImg medium"></div>
+      <div class="name heading">Fernanda</div>
+    </div>
+    <div style="text-align: left; padding: 0 2rem">
+      <p class="btn" onclick="cambiarNombre()">Cambiar Nombre</p>
+      <p class="title">Cambiar Avatar</p>
+    </div>
+    <div class="avatars grid">
+      <div class="avatar" onclick="cambiarAvatar(1, 'f', 0)">
+        <img src="img/avt/avt-n1-f.png" alt="n1-f">
+        <span class="price">Free</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(1, 'm', 0)">
+        <img src="img/avt/avt-n1-m.png" alt="n1-m">
+        <span class="price">Free</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(2, 'f', 1000)">
+        <img src="img/avt/avt-n2-f.png" alt="n2-f">
+        <span class="price">€1000</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(2, 'm', 1000)">
+        <img src="img/avt/avt-n2-m.png" alt="n2-m">
+        <span class="price">€1000</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(3, 'f', 1600)">
+        <img src="img/avt/avt-n3-f.png" alt="n3-f">
+        <span class="price">€1600</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(3, 'm', 1600)">
+        <img src="img/avt/avt-n3-m.png" alt="n3-m">
+        <span class="price">€1600</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(4, 'f', 2300)">
+        <img src="img/avt/avt-n4-f.png" alt="n4-f">
+        <span class="price">€2300</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(4, 'm', 2300)">
+        <img src="img/avt/avt-n4-m.png" alt="n4-m">
+        <span class="price">€2300</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(5, 'f', 3000)">
+        <img src="img/avt/avt-n5-f.png" alt="n5-f">
+        <span class="price">€3000</span>
+      </div>
+      <div class="avatar" onclick="cambiarAvatar(5, 'm', 3000)">
+        <img src="img/avt/avt-n5-m.png" alt="n5-m">
+        <span class="price">€3000</span>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <div class="ajustes">
+      <h1 class="title">Ajustes</h1>
+      <div class="btn" onclick="restablecer()">Restablecer</div>
+    </div>
+  </div>
+  <div class="registro">
+    <div class="header">
+      <h1 class="title">Bienvenido</h1>
+    </div>
+    <form method="POST" class="form other">
+      <h3>Comencemos con tus datos :)</h3>
+      <label for="name">Nombre</label>
+      <input type="text" id="name" autocomplete="off" autofocus>
+      <label for="edad">Edad</label>
+      <input type="tel" id="edad">
+      <label for="">Elije tu avatar</label>
+      <div class="flex" style="gap: 4rem">
+        <div class="avatarDefault n1-f avatarF"></div>
+        <div class="avatarDefault n1-m avatarM"></div>
+      </div>
+      <input type="submit" value="Comenzar" onclick="comenzar()" />
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
