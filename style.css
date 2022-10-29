@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Indie+Flower&family=Lobster&display=swap');
+
+:root {
+  --title: 'Abril Fatface', cursive;
+  --body: 'Anton', sans-serif;
+  --others: 'Indie Flower', cursive;
+  --heading: 'Lobster', cursive;
+}
+
+/* Globales */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+}
+
+body {
+  color: #ffffff;
+  font-weight: 900;
+  background-color: #222;
+  text-align: center;
+  font-family: var(--body);
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0 0 1rem 1rem;
+  border-bottom: 2px solid #00f;
+  /* flex */
+  justify-content: space-around;
+  position: relative;
+}
+
+.esc {
+  position: absolute;
+  right: 3rem;
+  top: 0;
+  font-size: 5rem;
+  color: #f44;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  font-family: var(--title);
+  font-size: 3rem;
+}
+
+.saldo {
+  width: 35%;
+  height: 4rem;
+  margin: 2rem auto;
+  border: 1px solid #aaa;
+  border-radius: .4rem;
+  background-color: #00a;
+}
+
+.avatarCurrent {
+  width: 100%;
+}
+
+.avatarImg {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  background-size: cover;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.avatarName {
+  width: 320px;
+  height: 4rem;
+  margin: 0 auto;
+  background-color: #00a;
+  border: 1px solid #aaa;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.heading {
+  font-family: var(--heading);
+  font-size: 3rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: .4rem 1rem;
+  border-top: 1px solid #aaa;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.juegos {
+  padding: 1rem 0;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.juegoImg {
+  min-width: 10rem;
+  min-height: 10rem;
+  border-radius: 50%;
+  background-color: #000;
+  background-size: cover;
+}
+
+.juegos .j1 .juegoImg {
+  background-image: url('../img/juegos/blackjack.jpg');
+}
+
+.juegos .juegoName {
+  font-size: 1.4rem;
+}
+/* Registro */
+
+.registro,
+.perfil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  font-size: 1.4rem;
+  overflow-y: scroll;
+}
+
+.form {
+  text-align: left;
+  padding: 2rem;
+  font-weight: 400;
+}
+
+.form label {
+  display: block;
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+
+.form input {
+  width: 80%;
+  height: 4rem;
+  border: 1px solid #aaa;
+  background-color: #000;
+  font-size: 2.4rem;
+  color: #fff;
+  font-family: var(--others);
+  border-radius: 1rem;
+  padding-left: 2rem;
+}
+
+.other {
+  font-family: var(--others);
+  font-size: 2.6rem;
+}
+
+.avatarDefault {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background-size: cover;
+}
+
+.avatarF {
+  background-image: url(../img/avt/avt-n1-f.png);
+}
+
+.avatarM {
+  background-image: url(../img/avt/avt-n1-m.png);
+}
+
+.form input[type="submit"] {
+  margin: 2rem 0;
+}
+
+/* Perfil */
+
+.info {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-radius: 2rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #00a;
+  margin: 3rem 0;
+  border-radius: 1rem;
+  border: 1px solid #aaa;
+  font-size: 2rem;
+  font-family: var(--heading)
+}
+
+.avatars {
+  width: 400px;
+  height: auto;
+  margin: 2rem auto;
+  /* Grid */
+  grid-template-columns: repeat(5, 1fr);
+  gap: .8rem;
+  row-gap: 2rem;
+}
+
+.avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.avatar .price {
+  position: absolute;
+  width: 100%;
+  bottom: -1.8rem;
+  left: 0;
+  font-weight: 300;
+}
+
+.ajustes {
+  text-align: left;
+  padding: 2rem;
+}
+
+
+
+
+.registro,
+.perfil {
+  display: none;
+}
+
+/* Globales Important */
+
+.mini {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.medium {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 2rem auto;
+}
+
+.no-margin {
+  margin: 0;
+}
